@@ -18,24 +18,35 @@ class OperationController extends Controller {
 		//
 	}
 
-
-    public function sum()
+    /**
+     * @param $value1
+     * @param $value2
+     * @return string
+     */
+    public function sum($value1,$value2)
     {
-        return "Se ejecuta una suma";
+$total=$value1+$value2;
+        return view('operations.sum')->with(compact('value1','value2','total')) ;
     }
 
-    public function resta()
+    public function subtraction($value1,$value2)
     {
-        return "Se ejecuta una resta";
+        return $value1 - $value2;
     }
-    public function multiplication()
+    public function multiplication($value1,$value2)
     {
-        return "Se ejecuta una multiplicacion";
+        return $value1*$value2 ;
     }
 
-    public function division()
+    public function division($value1,$value2)
 {
-    return "Se ejecuta una division";
+
+    if ($value2==0){
+
+        return "Syntax Error 404 Not Found";
+    }else {
+        return $value1 / $value2;
+    }
 }
 	/**
 	 * Show the form for creating a new resource.

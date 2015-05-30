@@ -18,12 +18,19 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
+Route::group(['prefix'=>'/operation'],function(){
 
-Route::get('/sum','OperationController@sum');
+    Route::get('/sum/{value1}/{value2}','OperationController@sum');
 
-Route::get('/multiplication','OperationController@multiplication');
+    Route::get('/multiplication/{value1}/{value2}','OperationController@multiplication');
 
-Route::get('/division','OperationController@division');
+    Route::get('/division/{value1}/{value2}','OperationController@division');
+
+    Route::get('/subtraction/{value1}/{value2}','OperationController@subtraction');
+
+
+});
+
 
 
 Route::controllers([

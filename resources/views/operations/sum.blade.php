@@ -1,0 +1,1 @@
+La Suma de  {!!$value1!!} y {!!$value2!!} da un valor de: {!!$total!!}
