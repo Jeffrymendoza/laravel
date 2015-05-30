@@ -14,12 +14,17 @@
 Route::get('/', 'WelcomeController@index');
 
 
-Route::get('/Jeffry/(nombre)', function($name)
-{
-   return name;
-});
+
 
 Route::get('home', 'HomeController@index');
+
+
+Route::get('/sum','OperationController@sum');
+
+Route::get('/multiplication','OperationController@multiplication');
+
+Route::get('/division','OperationController@division');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
