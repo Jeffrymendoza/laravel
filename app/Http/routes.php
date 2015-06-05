@@ -11,7 +11,21 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+
+
+//Route::get('/', 'WelcomeController@index');
+
+Route::get('/counties','CountyController');
+
+Route::resource('/departamentos','CountyController');
+
+Route::get('/cities','CityController');
+
+Route::resource('/ciudad','CityController');
+
+
+
+
 
 
 
